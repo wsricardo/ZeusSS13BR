@@ -15,3 +15,12 @@
 ## Demonstração
 
 [Blog (exemplo)](https://wsricardo.github.io/ZeusSS13BR/blog)
+
+## Dicas
+
+- [Tutorial Jinja2](https://realpython.com/primer-on-jinja-templating/)
+- [Jinja Documentação](https://jinja.palletsprojects.com/en/3.1.x/)
+- [Markdown Guide](https://www.markdownguide.org/)
+- [Gui Básico Markdown](https://docs.pipz.com/central-de-ajuda/learning-center/guia-basico-de-markdown#open)
+- [Github Docs Markdown](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+- [Github Documentação (para aprender a usar o Github)](https://docs.github.com/pt)
