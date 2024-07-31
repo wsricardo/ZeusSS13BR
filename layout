@@ -1,0 +1,73 @@
+# Static Site Blog 
+
+
+
+## dirs
+
+    -> root/
+        -> inputs/ { markdown files }
+        -> output/ {html files blog}
+        -> template/ { html template css, html, js . Copy for dir output. }
+        -> { config.json, posts.json }
+
+
+
+## Posts Form
+
+Cada item na lista  [ ... ] de posts, contém  { ... } que são dados do post
+com os campos: title, author, description, data, status, contentPost, input, urlPost.
+
+{
+    [
+        
+        {
+            title:"",
+            author: "",
+            description: "",
+            data: "",
+            status: <builded/none>
+            contentPost: "",
+            input: <post file markdown format for generate html post>
+            urlPost: <string integer name file>.html
+        },
+
+    ]
+    
+}
+
+## Configuração
+
+O arquivo configs.json especifica url base do site para o blog, titulo do site, author/criador, número de postagens por página.
+
+{
+    urlBase: "",
+    author: "",
+    titlePage: "",
+    numPostsPerPage: 5;
+}
+
+
+## Sistema
+
+    Classe Blog <--> Classe Post
+    Classe Blog:
+        -> Inicializar atributos
+        -> Configurar Blog
+        -> Constuir Páginas e Adicionar posts novos
+
+
+    Classe Post:
+        -> Inicializar Atributos
+        -> Criar Post
+        -> Converter Markdown para HTML
+        -> Analize se há marcação de inserção de vídeo no post 
+
+
+### Diretórios
+        ( Obs.: ZeusSS13BR -> Zeus Static Site 13 BRasil )
+
+        ZeusSS13BR/
+            -> post.py ( Defino objeto post reponsavel por criar postagens)
+            -> site.py ( Defini site estático e seus atributos )
+            -> config.py ( Configura base, como: no da url, titulo do site, entre outros)
+            -> docs/ (Documentação sobre funcionamento e uso)

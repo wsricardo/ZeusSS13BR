@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{blogName}}</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            margin: 0 auto;
+            width: 800px;
+            font-size: xx-large;
+            font-weight: 600;
+            color: rgb(111, 27, 189);   
+        }
+
+        header:hover{
+            color:rgb(146, 84, 204);
+            
+        }
+
+        .blog {
+            margin: 0 auto;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            width: 800px;
+        }
+
+        .post {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: space-between;
+            justify-content: center;
+        }
+
+        .post ul {
+            list-style: none;
+        }
+
+        .post ul li {
+            display: block;
+            width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 10px;
+            
+        }
+
+        .post ul li a {
+            color: black;
+        }
+
+        .post ul li a:hover {
+            color: blueviolet;
+
+        }
+
+        #postSection {
+            border: 2px solid gainsboro;
+            border-radius: 8px;
+            box-shadow: 4px 6px 18px #dbdbdb;
+            padding: 10px 0 10px 0;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #postSection:hover{
+            background-color: aliceblue;
+            box-shadow: 6px 10px 20px rgb(187, 175, 198);
+        }
+
+        .postTitle {
+            width: 100%;
+            font-size: x-large;
+            color: black;
+        }
+
+        .postDesc {
+            width: 100%;
+            color: gray;
+        }
+
+    </style>
+
+</head>
+<body>
+    <header>
+        {{blogName}}
+    </header>
+
+    <div class="blog">
+        <div class="post">
+            <ul>
+                {% for i in posts %}
+                <li>
+                    <section id="postSection">
+                        <div class="postTitle">
+                            {{i["filePost"].split('.')[0]}}
+                        </div>
+                        <!--<div class="postDesc">{{i['postDescription']}}</div>-->
+                        <div><a href="{{urlBase}}/{{i['filePost'].split('.')[0]+'.html'}}">Leia Mais</a></div>
+                    </section>
+                </li>
+                {% endfor %}
+
+
+            </ul>
+
+        </div>
+
+        <div style="padding: 10px;">
+            <a href="{{linkOldPosts}}">Old Posts</a>
+        </div>
+    </div>
+</body>
+</html>

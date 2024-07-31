@@ -1,0 +1,8 @@
+{
+    "blogName": "Wandeson Blog",
+    "urlBase": "/",
+    "author": "Wandeson",
+    "numPostPerPage": 5,
+    "input": "inputs/",
+    "output": "output/"
+}
